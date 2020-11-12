@@ -1,6 +1,6 @@
 package bsu.rfe.java.group6.lab1.Zhibul.var7;
 
-public class Apple extends Food {
+public class Apple  extends Food {
     // Новое внутреннее поле данных РАЗМЕР
     private String size;
 
@@ -41,5 +41,13 @@ public class Apple extends Food {
 // название продукта, но и его размер
     public String toString() {
         return super.toString() + " размера '" + size.toUpperCase() + "'";
+    }
+
+    @Override
+    public int calculateCalories() {
+        switch (this.size){
+            case 1
+        }
+        return 0;
     }
 }
