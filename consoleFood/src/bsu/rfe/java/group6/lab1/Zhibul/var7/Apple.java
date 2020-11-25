@@ -2,9 +2,10 @@ package bsu.rfe.java.group6.lab1.Zhibul.var7;
 
 public class Apple  extends Food {
     // Новое внутреннее поле данных РАЗМЕР
-    private String size;
-
-    public Apple(String size) {
+    enum AppleSize{МАЛЕНЬКОЕ,СРЕДНЕЕ,БОЛЬШОЕ}
+    //private String size;
+    AppleSize size;
+    public Apple(AppleSize size) {
 // Вызвать конструктор предка, передав ему имя класса
         super("Яблоко");
 // Инициализировать размер яблока
@@ -17,12 +18,12 @@ public class Apple  extends Food {
     }
 
     // Селектор для доступа к полю данных РАЗМЕР
-    public String getSize() {
+    public AppleSize getSize() {
         return size;
     }
 
     // Модификатор для изменения поля данных РАЗМЕР
-    public void setSize(String size) {
+    public void setSize(AppleSize size) {
         this.size = size;
     }
 
@@ -40,14 +41,15 @@ public class Apple  extends Food {
     // Переопределѐнная версия метода toString(), возвращающая не только
 // название продукта, но и его размер
     public String toString() {
-        return super.toString() + " размера '" + size.toUpperCase() + "'";
+        return super.toString() + " размера '" + size.toString() + "'";
     }
 
     @Override
     public int calculateCalories() {
-        switch (this.size){
-            case 1
-        }
-        return 0;
+        return switch (this.size) {
+            case МАЛЕНЬКОЕ -> 50;
+            case СРЕДНЕЕ -> 100;
+            case БОЛЬШОЕ -> 150;
+        };
     }
 }

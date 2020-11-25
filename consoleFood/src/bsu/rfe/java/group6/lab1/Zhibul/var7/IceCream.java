@@ -3,7 +3,16 @@ package bsu.rfe.java.group6.lab1.Zhibul.var7;
 import java.util.Objects;
 
 public class IceCream extends Food {
-    public enum SyrupType {КАРАМЕЛЬНОЕ, ШОКОЛАДНОЕ, ВАНИЛЬНОЕ};
+    @Override
+    public int calculateCalories() {
+        return switch (this.syrup) {
+            case КАРАМЕЛЬНОЕ -> 350;
+            case ШОКОЛАДНОЕ -> 400;
+            case ВАНИЛЬНОЕ -> 300;
+        };
+    }
+
+    public enum SyrupType {КАРАМЕЛЬНОЕ, ШОКОЛАДНОЕ, ВАНИЛЬНОЕ}
 
     private final SyrupType syrup;
     public IceCream(SyrupType syrup) {

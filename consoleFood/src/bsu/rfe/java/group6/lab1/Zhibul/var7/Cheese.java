@@ -8,6 +8,11 @@ public class Cheese extends Food {
     public void consume() {
         System.out.println(this + " съеден");
     }
+
+    @Override
+    public int calculateCalories() {
+        return 30;
+    }
 // Переопределять метод equals() в данном классе не нужно, т.к. он
 // не добавляет новых полей данных, а сравнение по внутреннему полю name
 // уже реализовано в базовом классе
