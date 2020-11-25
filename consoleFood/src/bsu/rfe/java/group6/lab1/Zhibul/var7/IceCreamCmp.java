@@ -6,6 +6,6 @@ public class IceCreamCmp implements Comparator<IceCream> {
 
     @Override
     public int compare(IceCream o1, IceCream o2) {
-        return o1.getSyrup().toString().length() - o2.getSyrup().toString().length();
+        return o2.getSyrup().toString().length() - o1.getSyrup().toString().length();
     }
 }

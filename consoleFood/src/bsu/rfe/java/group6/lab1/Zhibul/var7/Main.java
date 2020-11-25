@@ -1,6 +1,10 @@
 package bsu.rfe.java.group6.lab1.Zhibul.var7;
 
+import java.util.Arrays;
+
 public class Main {
+    private final static String delim = "===========================================";
+
     // Конструктор класса отсутствует!!!
     // Главный метод главного класса
     public static void main(String[] args) {
@@ -35,7 +39,7 @@ public class Main {
                         System.out.println("Не хочу мороженое без сиропа, оставлю в холодильнике");
                         continue;
                     } catch (IllegalArgumentException e) {
-                        System.out.println( parts[1] + " мороженое у меня закончилось, надо бы купить ");
+                        System.out.println(parts[1] + " мороженое у меня закончилось, надо бы купить ");
                         continue;
                     }
                 }
@@ -46,6 +50,12 @@ public class Main {
             itemsSoFar++;
 // ... Продолжается анализ других продуктов для завтрака
         }
+
+        Arrays.sort(breakfast, new FoodOnlyIceCreamCmp());
+        System.out.println(delim);
+        printArray("Меню на сегодняшний завтрак", breakfast);
+        System.out.println(delim);
+
         if (caloriesRequired)
             System.out.println("Калорийность завтрака: " + calculateCalories(breakfast));
 // Перебор всех элементов массива
@@ -62,9 +72,17 @@ public class Main {
         System.out.println("Всего хорошего!");
     }
 
+    private static void printArray(String msg, Food[] breakfast) {
+        System.out.println(msg);
+        for (Food food : breakfast) {
+            if (food != null)
+                System.out.println(food);
+        }
+    }
+
     private static int calculateCalories(Food[] breakfast) {
         int sum = 0;
-        for (Food food : breakfast){
+        for (Food food : breakfast) {
             if (food != null) {
                 sum += food.calculateCalories();
             }

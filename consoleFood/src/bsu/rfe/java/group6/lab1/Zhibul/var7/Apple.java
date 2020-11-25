@@ -41,7 +41,7 @@ public class Apple  extends Food {
     // Переопределѐнная версия метода toString(), возвращающая не только
 // название продукта, но и его размер
     public String toString() {
-        return super.toString() + " размера '" + size.toString() + "'";
+        return super.toString() + " " + size.toString().toLowerCase();
     }
 
     @Override
