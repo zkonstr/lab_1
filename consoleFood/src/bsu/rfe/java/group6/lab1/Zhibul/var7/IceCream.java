@@ -15,9 +15,10 @@ public class IceCream extends Food {
     public enum SyrupType {КАРАМЕЛЬНОЕ, ШОКОЛАДНОЕ, ВАНИЛЬНОЕ}
 
     private final SyrupType syrup;
+
     public IceCream(SyrupType syrup) {
         super("Мороженое");
-        this.syrup =syrup;
+        this.syrup = syrup;
     }
 
     @Override

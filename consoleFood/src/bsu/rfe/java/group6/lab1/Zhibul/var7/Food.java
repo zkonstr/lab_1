@@ -1,7 +1,7 @@
 package bsu.rfe.java.group6.lab1.Zhibul.var7;
 
 
-public abstract class Food implements Consumable,Nutritious {
+public abstract class Food implements Consumable, Nutritious {
     String name = null;
 
     public Food(String name) {

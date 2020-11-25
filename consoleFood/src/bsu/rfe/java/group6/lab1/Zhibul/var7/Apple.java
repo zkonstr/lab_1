@@ -1,10 +1,12 @@
 package bsu.rfe.java.group6.lab1.Zhibul.var7;
 
-public class Apple  extends Food {
+public class Apple extends Food {
     // Новое внутреннее поле данных РАЗМЕР
-    enum AppleSize{МАЛЕНЬКОЕ,СРЕДНЕЕ,БОЛЬШОЕ}
+    enum AppleSize {МАЛЕНЬКОЕ, СРЕДНЕЕ, БОЛЬШОЕ}
+
     //private String size;
     AppleSize size;
+
     public Apple(AppleSize size) {
 // Вызвать конструктор предка, передав ему имя класса
         super("Яблоко");
