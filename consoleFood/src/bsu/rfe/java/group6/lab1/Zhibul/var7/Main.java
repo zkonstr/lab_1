@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     private final static String delim = "===========================================";
 
-    // Конструктор класса отсутствует!!!
+
     // Главный метод главного класса
     public static void main(String[] args) {
         // Определение ссылок на продукты завтрака
@@ -51,7 +51,7 @@ public class Main {
 // ... Продолжается анализ других продуктов для завтрака
         }
 
-        Arrays.sort(breakfast, new FoodOnlyIceCreamCmp());
+        Arrays.sort(breakfast, new FoodCmp());
         System.out.println(delim);
         printArray("Меню на сегодняшний завтрак", breakfast);
         System.out.println(delim);
